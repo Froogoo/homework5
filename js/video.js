@@ -6,21 +6,20 @@ video.autoplay = false;
 video.loop = false;
 video.load();
 
-
-var playButton = document.getElementById('play');
+var playButton = document.getElementById("play");
 function playVid() {
     video.play();
 }
 playButton.addEventListener("click", playVid);
 
-var pauseButton = document.getElementById('pause');
+var pauseButton = document.getElementById("pause");
 function pauseVid() {
     video.pause();
 }
 pauseButton.addEventListener("click", pauseVid);
 
 
-var slower = document.getElementById('slower');
+var slower = document.getElementById("slower");
 video.defaultPlaybackRate = 1.0
 function slowPlaySpeed() {
     video.playbackRate /= 2;
@@ -30,7 +29,7 @@ function slowPlaySpeed() {
 }
 slower.addEventListener("click", slowPlaySpeed);
 
-var faster = document.getElementById('faster');
+var faster = document.getElementById("faster");
 video.defaultPlaybackRate = 1.0
 function fastPlaySpeed() {
     video.playbackRate *= 2;
@@ -40,9 +39,8 @@ function fastPlaySpeed() {
 }
 faster.addEventListener("click", fastPlaySpeed);
 
-var skip = document.getElementById('skip');
+var skip = document.getElementById("skip");
 function skipahead() {
-    // var video = document.getElementById("video");
     video.currentTime += 15;
     if (video.currentTime > 67){
         video.currentTime = 0;
@@ -50,7 +48,7 @@ function skipahead() {
 }
 skip.addEventListener("click", skipahead);
 
-var mute = document.getElementById('mute');
+var mute = document.getElementById("mute");
 function muteandunmute(){
     if (mute == 'mute'){
         video.muted = true;
@@ -63,7 +61,7 @@ function muteandunmute(){
 }
 mute.addEventListener("click", muteandunmute);
 
-let volume = document.getElementById('slider');
+let volume = document.getElementById("slider");
 volume.addEventListener("change", function(e) {
     video.volume = e.currentTarget.value / 100;
 })
